@@ -1,0 +1,223 @@
+/* styles.css - Enhanced Version */
+:root {
+    --primary-red: #E60000;
+    --dark-red: #C10000;
+    --coke-black: #1A1A1A;
+    --gold-accent: #FFD700;
+    --light-gray: #F8F8F8;
+    --pure-white: #FFFFFF;
+    --gradient-red: linear-gradient(135deg, #E60000 0%, #B80000 100%);
+  }
+  
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--pure-white);
+    color: var(--coke-black);
+    line-height: 1.6;
+  }
+  
+  /* Header Section */
+  .header {
+    text-align: center;
+    background: var(--gradient-red);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 15px rgba(230, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--gold-accent),
+      var(--gold-accent) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  }
+  
+  .main-title {
+    font-size: 5rem;
+    color: var(--pure-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    margin: 0.5rem 0;
+    /* font-family: 'Arial Black', Impact, sans-serif;
+   */
+   font-family:'Times New Roman', Times, serif;
+  }
+  
+  .logo {
+    width: 200px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: rotate(-5deg) scale(1.05);
+  }
+  
+  /* Poll Container */
+  .poll-container {
+    background: var(--pure-white);
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .poll-question {
+    color: var(--primary-red);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .poll-question::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold-accent);
+    margin: 1rem auto;
+  }
+  
+  /* Poll Options Grid */
+  .poll-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .option {
+    background: var(--light-gray);
+    border-radius: 15px;
+    padding: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+  
+  .option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(230, 0, 0, 0.15);
+    border-color: var(--primary-red);
+  }
+  
+  .option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .option img {
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  }
+  
+  .option:hover img {
+    transform: scale(1.1) rotate(2deg);
+  }
+  
+  input[type='radio']:checked + label {
+    background: var(--gradient-red);
+    color: var(--pure-white);
+    border-radius: 12px;
+  }
+  
+  /* Buttons */
+  button {
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg) translate(-20%, 100%);
+    transition: all 0.5s ease;
+  }
+  
+  button:hover::after {
+    transform: rotate(45deg) translate(20%, -100%);
+  }
+  
+  .vote-button, .Review-button {
+    background: var(--gradient-red);
+    border: none !important;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: auto !important;
+    margin: 1rem auto !important;
+    display: block !important;
+  }
+  
+  /* Review Section */
+  .Review-cont {
+    background: var(--light-gray);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    margin: 3rem auto;
+    max-width: 800px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  }
+  
+  .Reviewhead {
+    color: var(--primary-red);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  #Re {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: 2px solid var(--primary-red) !important;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  
+  #Re:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(230, 0, 0, 0.2);
+  }
+  
+#container {
+    background: var(--pure-white) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    border: none !important;
+    padding: 2rem !important;
+    margin: 3rem auto !important;
+    width: 90% !important;
+    min-height: 600px !important; 
+    max-width: 1200px !important; 
+  }
+  
+ 
+  #container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 550px !important;
+  }

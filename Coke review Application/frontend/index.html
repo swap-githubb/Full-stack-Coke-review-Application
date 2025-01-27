@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coke Vote</title>
+    <link href="./styles2.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="main-title">Review Coke</h1>
+      <img src="./images/coca-cola-logo.png" alt="Coca Cola logo" class="logo" />
+    </div>
+
+    <div class="poll-container">
+      <h2 class="poll-question">What is your favorite Coca Cola flavor?</h2>
+
+      <form id="poll-form" class="poll-form">
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/coca_cola.png" alt="Coca Cola can" width="75" />
+            <input type="radio" name="flavor" value="Coca Cola" required />
+            Coca Cola‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+          </label>
+        </div>
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/diet_coke.png" alt="Diet Coke can" width="75" />
+            <input type="radio" name="flavor" value="Diet Coke" />
+            Diet Coke‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+          </label>
+        </div>
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/coke_zero_sugar.png" alt="Coke Zero can" width="75" />
+            <input type="radio" name="flavor" value="Coke Zero" />
+            Coke Zero‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+          </label>
+        </div>
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/coke_cherry.png" alt="Cherry Coke can" width="60" />
+            <input type="radio" name="flavor" value="Cherry Coke" />
+            Cherry Coke‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+          </label>
+        </div>
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/coke_cherry_vanilla.png" alt="Cherry Vanilla Coke can" width="65" />
+            <input type="radio" name="flavor" value="Cherry Vanilla" />
+            Cherry Vanilla
+          </label>
+        </div>
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/coke_lemon.png" alt="Lemon Coke can" width="75" />
+            <input type="radio" name="flavor" value="Lemon Coke" />
+            Lemon Coke
+          </label>
+        </div>
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/coke_lime.png" alt="Lime Coke can" width="45" />
+            <input type="radio" name="flavor" value="Lime Coke" />
+            Lime Coke
+          </label>
+        </div>
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/coke_orange_vanilla.png" alt="Orange Vanilla Coke can" width="75" />
+            <input type="radio" name="flavor" value="Orange Vanilla Coke" />
+            Orange Vanilla Coke
+          </label>
+        </div>
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/coke_vanilla.png" alt="Vanilla Coke can" width="75" />
+            <input type="radio" name="flavor" value="Vanilla Coke" />
+            Vanilla Coke‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+          </label>
+        </div>
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/peach-coke-no-bg.png" alt="Peach Coke can" width="40" />
+            <input type="radio" name="flavor" value="Peach Coke" />
+            Peach Coke
+          </label>
+        </div>
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/tropical-coke-no-bg.png" alt="Tropical Coke can" width="40" />
+            <input type="radio" name="flavor" value="Tropical Coke" />
+            Tropical Coke
+          </label>
+        </div>
+
+        <div class="option">
+          <label>
+            <img src="images/coke_cans/coke_caffeine_free.png" alt="Caffeine Free Coke can" width="75" />
+            <input type="radio" name="flavor" value="Caffeine Free" />
+            Caffeine Free
+          </label>
+        </div>
+        <div class="vote-button-container">
+          <button type="submit" class="vote-button">Vote</button>
+        </div>
+      </form>
+    </div>
+   
+    <form id="resub">
+    <div class="Review-cont">
+      <h2 class="Reviewhead">Give your Product Perspective</h2>
+       
+         <div class="R">
+            <input type="text" id="Re" name="Review" placeholder="Write you review here" />
+         </div>
+          <div class="Review-button-container">
+            <button type="submit" class="Review-button">Submit Review</button>
+          </div> 
+           
+    </div>
+  </form>
+
+    <canvas id="container" width="400" height="200"></canvas>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>

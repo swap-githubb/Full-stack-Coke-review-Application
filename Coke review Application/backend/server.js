@@ -21,10 +21,10 @@ server.get('/', (req, res) => {
 });
 
 const pool  = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'Shiv@1234',
-    database: 'coke_poll',
+    host: 'your-host-name',
+    user: 'user-name',
+    password: 'your-password',
+    database: 'database-name',
 });
 
 pool.query('SELECT 1 + 1 AS result', (err, results) => {
